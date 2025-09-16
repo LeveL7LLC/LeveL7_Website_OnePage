@@ -59,7 +59,7 @@ export default function LevelsSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-card-foreground mb-6">
-            Our <span className="text-level7-pink">7 Levels</span> of Success
+            Our <span className="bg-gradient-to-r from-level7-pink to-level7-blue bg-clip-text text-transparent">7 Levels</span> of Success
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A proven methodology that takes your business from chaos to exponential growth
@@ -77,7 +77,7 @@ export default function LevelsSection() {
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-level7-purple to-level7-pink rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-level7-pink to-level7-blue heptagon flex items-center justify-center">
                       <span className="text-white font-bold text-lg">{level.number}</span>
                     </div>
                     <div>

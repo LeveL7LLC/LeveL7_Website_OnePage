@@ -7,7 +7,7 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Built for <span className="text-level7-blue">Small Service Businesses</span>
+            Built for <span className="bg-gradient-to-r from-level7-blue to-level7-pink bg-clip-text text-transparent">Small Service Businesses</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We understand the unique challenges of service-based businesses and have tailored our solutions accordingly
@@ -17,7 +17,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-level7-purple to-level7-pink rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink to-level7-blue heptagon flex items-center justify-center mx-auto mb-6">
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Focus</h3>
@@ -29,7 +29,7 @@ export default function AboutSection() {
 
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink to-level7-blue rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-level7-blue to-level7-pink heptagon flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Clients</h3>
@@ -41,7 +41,7 @@ export default function AboutSection() {
 
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-level7-blue to-level7-purple rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink via-level7-purple to-level7-blue heptagon flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Promise</h3>
@@ -52,7 +52,7 @@ export default function AboutSection() {
           </Card>
         </div>
 
-        <div className="bg-gradient-to-r from-level7-purple/20 to-level7-pink/20 rounded-lg p-8 md:p-12 text-center">
+        <div className="bg-gradient-to-r from-level7-pink/20 via-level7-purple/15 to-level7-blue/20 rounded-lg p-8 md:p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Why Choose LeveL7?
           </h3>

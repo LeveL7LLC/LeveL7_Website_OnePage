@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-foreground">
-                LeveL<span className="text-level7-pink">7</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-level7-pink to-level7-blue bg-clip-text text-transparent">
+                LeveL7
               </span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">

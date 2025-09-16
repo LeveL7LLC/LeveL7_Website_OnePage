@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import heptagonLogo from "@assets/L7-LOGO_Heptagon_no-tagline_no-background_72dpi (Custom)_1757993938191.png";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +27,17 @@ export default function Navigation() {
           <div className="flex items-center">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-2xl font-bold text-foreground"
+              className="flex items-center gap-2"
               data-testid="button-logo"
             >
-              LeveL<span className="text-level7-pink">7</span>
+              <img 
+                src={heptagonLogo} 
+                alt="LeveL7" 
+                className="h-10 w-10"
+              />
+              <span className="text-xl font-bold text-foreground">
+                LeveL<span className="text-level7-pink">7</span>
+              </span>
             </button>
           </div>
 

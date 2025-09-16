@@ -6,8 +6,12 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,16 +21,43 @@ export default function ContactSection() {
     message: ''
   });
 
+  const submitContactForm = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      const response = await apiRequest('POST', '/api/contact', data);
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Thank you for your inquiry!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    },
+    onError: (error) => {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
+  });
+
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    console.log(`${field} updated:`, value);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // TODO: Implement actual form submission
-    alert('Thank you for your inquiry! We\'ll get back to you within 24 hours.');
+    submitContactForm.mutate(formData);
   };
 
   return (
@@ -138,8 +169,9 @@ export default function ContactSection() {
                   type="submit" 
                   className="w-full bg-level7-pink hover:bg-level7-pink/90 text-white py-6 text-lg"
                   data-testid="button-submit-contact"
+                  disabled={submitContactForm.isPending}
                 >
-                  Get My Free Consultation
+                  {submitContactForm.isPending ? 'Sending...' : 'Get My Free Consultation'}
                 </Button>
               </form>
             </CardContent>

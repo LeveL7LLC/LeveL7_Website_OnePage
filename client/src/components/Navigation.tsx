@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import heptagonLogo from "@assets/L7-LOGO_Heptagon_no-tagline_no-background_72dpi (Custom)_1757993938191.png";
 
 export default function Navigation() {
@@ -53,6 +53,14 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
+            <a 
+              href="tel:+18775538357" 
+              className="flex items-center gap-2 text-foreground hover:text-level7-blue transition-colors duration-200"
+              data-testid="nav-phone"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="font-medium">(877) 5-LEVEL7</span>
+            </a>
             <Button 
               className="bg-level7-pink hover:bg-level7-pink/90 text-white"
               onClick={() => scrollToSection('contact')}
@@ -88,6 +96,14 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
+              <a 
+                href="tel:+18775538357" 
+                className="flex items-center gap-2 text-foreground hover:text-level7-blue transition-colors duration-200"
+                data-testid="mobile-nav-phone"
+              >
+                <Phone className="h-4 w-4" />
+                <span className="font-medium">(877) 5-LEVEL7</span>
+              </a>
               <Button 
                 className="bg-level7-pink hover:bg-level7-pink/90 text-white w-full"
                 onClick={() => scrollToSection('contact')}

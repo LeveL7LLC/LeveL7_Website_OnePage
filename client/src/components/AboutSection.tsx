@@ -18,7 +18,7 @@ export default function AboutSection() {
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
               <div className="w-16 h-16 bg-gradient-to-br from-level7-pink to-level7-blue heptagon flex items-center justify-center mx-auto mb-6">
-                <Target className="h-8 w-8 text-white" />
+                <Target className="h-8 w-8 text-white rotate-180" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Focus</h3>
               <p className="text-muted-foreground">
@@ -30,7 +30,7 @@ export default function AboutSection() {
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
               <div className="w-16 h-16 bg-gradient-to-br from-level7-blue to-level7-pink heptagon flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-white" />
+                <Users className="h-8 w-8 text-white rotate-180" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Clients</h3>
               <p className="text-muted-foreground">
@@ -42,7 +42,7 @@ export default function AboutSection() {
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
               <div className="w-16 h-16 bg-gradient-to-br from-level7-pink via-level7-purple to-level7-blue heptagon flex items-center justify-center mx-auto mb-6">
-                <Zap className="h-8 w-8 text-white" />
+                <Zap className="h-8 w-8 text-white rotate-180" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Promise</h3>
               <p className="text-muted-foreground">

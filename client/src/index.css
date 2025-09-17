@@ -274,7 +274,12 @@
 
   /* Heptagon shape for LeveL7 branding - 7 sides, rotated 180 degrees */
   .heptagon {
-    clip-path: polygon(50% 0%, 79% 19%, 91% 66%, 71% 96%, 29% 96%, 9% 66%, 21% 19%);
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    transform: rotate(180deg);
+  }
+
+  /* Utility class for 180-degree rotation */
+  .rotate-180 {
     transform: rotate(180deg);
   }
 }

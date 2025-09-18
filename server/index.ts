@@ -57,9 +57,11 @@ app.use((req, res, next) => {
   }
 
   // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
+  // Other ports are firewalled. Falls back to PORT from .env file, then to 5000.
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
+  
+  // Priority: 1) System env PORT, 2) .env file PORT (now loaded), 3) default 5000
   const port = parseInt(process.env.PORT || '5000', 10);
   server.listen(port, () => {
     log(`serving on port ${port}`);

@@ -17,7 +17,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink to-level7-blue heptagon flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink to-level7-blue heptagon heptagon-lg flex items-center justify-center mx-auto mb-6">
                 <Target className="h-8 w-8 text-white rotate-180" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Focus</h3>
@@ -29,7 +29,7 @@ export default function AboutSection() {
 
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-level7-blue to-level7-pink heptagon flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-level7-blue to-level7-pink heptagon heptagon-lg flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-white rotate-180" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Clients</h3>
@@ -41,7 +41,7 @@ export default function AboutSection() {
 
           <Card className="text-center bg-card border-card-border hover-elevate">
             <CardContent className="pt-8 pb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink via-level7-purple to-level7-blue heptagon flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-level7-pink via-level7-purple to-level7-blue heptagon heptagon-lg flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-8 w-8 text-white rotate-180" />
               </div>
               <h3 className="text-xl font-semibold text-card-foreground mb-4">Our Promise</h3>

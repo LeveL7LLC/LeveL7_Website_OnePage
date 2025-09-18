@@ -77,7 +77,7 @@ export default function LevelsSection() {
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-level7-pink to-level7-blue heptagon flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-level7-pink to-level7-blue heptagon heptagon-md flex items-center justify-center">
                       <span className="text-white font-bold text-lg rotate-180">{level.number}</span>
                     </div>
                     <div>

@@ -233,7 +233,7 @@ export default function ContactSection() {
             <Card className="bg-background border-border">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-level7-purple to-level7-pink rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 heptagon-md bg-gradient-to-br from-level7-purple to-level7-pink rounded-lg flex items-center justify-center">
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -249,7 +249,7 @@ export default function ContactSection() {
             <Card className="bg-background border-border">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-level7-pink to-level7-blue rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 heptagon-md bg-gradient-to-br from-level7-pink to-level7-blue rounded-lg flex items-center justify-center">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -267,7 +267,7 @@ export default function ContactSection() {
             <Card className="bg-background border-border">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-level7-blue to-level7-purple rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 heptagon-md bg-gradient-to-br from-level7-blue to-level7-purple rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -287,19 +287,19 @@ export default function ContactSection() {
               <h3 className="text-xl font-bold text-foreground mb-4">What Happens Next?</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-level7-pink rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 heptagon-sm bg-level7-pink rounded-full flex items-center justify-center">
                     <span className="text-white text-sm font-bold">1</span>
                   </div>
                   <p className="text-muted-foreground">We'll schedule a 30-minute discovery call</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-level7-purple rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 heptagon-sm bg-level7-purple rounded-full flex items-center justify-center">
                     <span className="text-white text-sm font-bold">2</span>
                   </div>
                   <p className="text-muted-foreground">We'll analyze your current setup and goals</p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-level7-blue rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 heptagon-sm bg-level7-blue rounded-full flex items-center justify-center">
                     <span className="text-white text-sm font-bold">3</span>
                   </div>
                   <p className="text-muted-foreground">We'll create a custom plan for your business</p>

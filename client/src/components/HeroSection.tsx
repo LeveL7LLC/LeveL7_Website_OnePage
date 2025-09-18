@@ -1,20 +1,52 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/Professional_tech_workspace_hero_image_5694d2d0.png";
-import fullLogo from "@assets/L7-LOGO_72dpi_500px_no-bkgrnd_1757993938191.png";
+import { useState, useEffect } from "react";
+
+// Import images with fallback handling
+let heroImage: string;
+let fullLogo: string;
+
+try {
+  heroImage = new URL("@assets/generated_images/Professional_tech_workspace_hero_image_5694d2d0.png", import.meta.url).href;
+} catch {
+  heroImage = "/attached_assets/generated_images/Professional_tech_workspace_hero_image_5694d2d0.png";
+}
+
+try {
+  fullLogo = new URL("@assets/L7-LOGO_72dpi_500px_no-bkgrnd_1757993938191.png", import.meta.url).href;
+} catch {
+  fullLogo = "/attached_assets/L7-LOGO_72dpi_500px_no-bkgrnd_1757993938191.png";
+}
 
 export default function HeroSection() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    // Preload hero image
+    const img = new Image();
+    img.onload = () => setImageLoaded(true);
+    img.onerror = () => setImageError(true);
+    img.src = heroImage;
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ${
+          imageError ? 'opacity-0' : imageLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{ backgroundImage: imageLoaded && !imageError ? `url(${heroImage})` : undefined }}
       />
+      {/* Fallback gradient background when image fails to load */}
+      <div className={`absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ${
+        imageError || !imageLoaded ? 'opacity-100' : 'opacity-0'
+      } transition-opacity duration-500`} />
       <div className="absolute inset-0 bg-gradient-to-br from-level7-pink/70 via-level7-purple/60 to-level7-blue/50" />
       
       {/* Content */}

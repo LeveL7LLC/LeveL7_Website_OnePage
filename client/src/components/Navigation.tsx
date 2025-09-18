@@ -1,7 +1,15 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import heptagonLogo from "@assets/L7-LOGO_Heptagon_no-tagline_no-background_72dpi (Custom)_1757993938191.png";
+
+// Import logo with fallback handling
+let heptagonLogo: string;
+
+try {
+  heptagonLogo = new URL("@assets/L7-LOGO_Heptagon_no-tagline_no-background_72dpi (Custom)_1757993938191.png", import.meta.url).href;
+} catch {
+  heptagonLogo = "/attached_assets/L7-LOGO_Heptagon_no-tagline_no-background_72dpi (Custom)_1757993938191.png";
+}
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

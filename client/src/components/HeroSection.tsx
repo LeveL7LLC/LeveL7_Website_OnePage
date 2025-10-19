@@ -51,7 +51,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-level7-pink/70 via-level7-purple/60 to-level7-blue/50" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <div className="mb-8">
           <img 
             src={fullLogo} 
@@ -64,14 +64,14 @@ export default function HeroSection() {
           We specialize in lead management and business automation.
         </p> */}
 
-        <p className="text-3xl md:text-5xl font-extrabold text-level7-text/90 mb-12 max-w-3xl mx-auto">
-          WE FIX 
+        <p className="text-5xl md:text-6xl font-extrabold text-level7-text/90 mb-12 mt-12 max-w-4xl mx-auto">
+          WE FIX<br className="block md:hidden" />
           <Typeanimation
-            words={[' SLOW LEAD FLOW', ' BAD PROCESSES', ' KPI DATA', ' BROKEN COMPUTERS', ' UNHELPFUL SOFTWARE', ' AUTOMATIONS', ' ANALYTICS']}
+            words={[' SLOW LEAD FLOW', ' BAD PROCESSES', ' KPI DATA', ' REPORTING', ' BROKEN COMPUTERS', ' JANKY SOFTWARE', ' AUTOMATIONS', ' ANALYTICS']}
             typingSpeed="slow"
             deletingSpeed={90}
             pauseDuration={2000}
-            className="text-3xl md:text-5xl font-extrabold text-level7-blue"
+            className="text-4xl md:text-6xl font-extrabold text-level7-blue"
           />
         </p>
         

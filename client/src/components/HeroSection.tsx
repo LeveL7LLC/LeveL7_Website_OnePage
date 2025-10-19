@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Typeanimation } from '@/components/ui/typeanimation';
+import Typeanimation from "@/components/ui/typeanimation";
 
 // Import images with fallback handling
 let heroImage: string;
@@ -13,9 +13,9 @@ try {
 }
 
 try {
-  fullLogo = new URL("@assets/L7-LOGO_72dpi_500px_no-bkgrnd_1757993938191.png", import.meta.url).href;
+  fullLogo = new URL("@assets/L7-LOGO_V2_NO-BKGRD.png", import.meta.url).href;
 } catch {
-  fullLogo = "/attached_assets/L7-LOGO_72dpi_500px_no-bkgrnd_1757993938191.png";
+  fullLogo = "/attached_assets/L7-LOGO_V2_NO-BKGRD.png";
 }
 
 export default function HeroSection() {
@@ -64,14 +64,14 @@ export default function HeroSection() {
           We specialize in lead management and business automation.
         </p> */}
 
-        <p className="text-lg md:text-xl text-level7-text/90 mb-12 max-w-2xl mx-auto">
+        <p className="text-3xl md:text-5xl font-extrabold text-level7-text/90 mb-12 max-w-3xl mx-auto">
           WE FIX 
           <Typeanimation
-            words={[' possibilities', ' opportunities', ' potential']}
+            words={[' SLOW LEAD FLOW', ' BAD PROCESSES', ' KPI DATA', ' BROKEN COMPUTERS', ' UNHELPFUL SOFTWARE', ' AUTOMATIONS', ' ANALYTICS']}
             typingSpeed="slow"
-            deletingSpeed="slow"
+            deletingSpeed={90}
             pauseDuration={2000}
-            className="text-3xl md:text-5xl font-extrabold text-teal-600"
+            className="text-3xl md:text-5xl font-extrabold text-level7-blue"
           />
         </p>
         
@@ -87,7 +87,7 @@ export default function HeroSection() {
           <Button 
             size="lg"
             variant="outline"
-            className="border-level7-blue text-level7-blue hover:bg-level7-blue/10 px-8 py-6 text-lg backdrop-blur-sm"
+            className="[border-color:hsl(var(--level7-blue))] text-level7-blue hover:bg-level7-blue/10 px-8 py-6 text-lg backdrop-blur-sm"
             onClick={() => scrollToSection('services')}
             data-testid="button-our-services"
           >

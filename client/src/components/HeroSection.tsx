@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { Typeanimation } from '@/components/ui/typeanimation';
 
 // Import images with fallback handling
 let heroImage: string;
@@ -58,9 +59,20 @@ export default function HeroSection() {
             className="h-32 md:h-40 mx-auto"
           />
         </div>
-        <p className="text-lg md:text-xl text-level7-text/90 mb-12 max-w-2xl mx-auto">
+        {/* <p className="text-lg md:text-xl text-level7-text/90 mb-12 max-w-2xl mx-auto">
           Comprehensive MSP and Digital Marketing services designed specifically for small service businesses. 
           We specialize in lead management and business automation.
+        </p> */}
+
+        <p className="text-lg md:text-xl text-level7-text/90 mb-12 max-w-2xl mx-auto">
+          WE FIX 
+          <Typeanimation
+            words={[' possibilities', ' opportunities', ' potential']}
+            typingSpeed="slow"
+            deletingSpeed="slow"
+            pauseDuration={2000}
+            className="text-3xl md:text-5xl font-extrabold text-teal-600"
+          />
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

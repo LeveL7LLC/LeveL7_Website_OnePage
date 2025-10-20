@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ElectricBorderButton } from "@/components/ui/electric-border-button";
 import { useState, useEffect } from "react";
 import Typeanimation from "@/components/ui/typeanimation";
 
@@ -76,14 +77,25 @@ export default function HeroSection() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
+          {/* Original button - commented out for easy reverting */}
+          {/* <Button 
             size="lg"
             className="bg-level7-pink hover:bg-level7-pink/90 text-white px-8 py-6 text-lg"
             onClick={() => scrollToSection('contact')}
             data-testid="button-get-started"
           >
             Get Started Today
-          </Button>
+          </Button> */}
+          
+          {/* New electric border button */}
+          <ElectricBorderButton 
+            size="lg"
+            className="px-8 py-6 text-lg"
+            onClick={() => scrollToSection('contact')}
+            data-testid="button-get-started"
+          >
+            Get Started Today
+          </ElectricBorderButton>
           <Button 
             size="lg"
             variant="outline"

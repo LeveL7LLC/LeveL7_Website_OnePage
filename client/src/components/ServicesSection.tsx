@@ -11,7 +11,10 @@ import {
   Megaphone, 
   Search, 
   Users, 
-  Zap 
+  Zap,
+  Printer,
+  Phone,
+  Wrench
 } from "lucide-react";
 
 const services = [
@@ -74,6 +77,21 @@ const services = [
     icon: Zap,
     title: "AI Integrations",
     description: "Cutting-edge AI solutions to automate tasks and enhance business intelligence."
+  },
+  {
+    icon: Printer,
+    title: "Print",
+    description: "High-quality EDDM postcards and business cards to make a lasting impression."
+  },
+  {
+    icon: Phone,
+    title: "VoIP",
+    description: "Reliable VoIP phone system installation and management for clear communication."
+  },
+  {
+    icon: Wrench,
+    title: "PC Repair",
+    description: "Expert PC repair and installation services to keep your systems running smoothly."
   }
 ];
 
